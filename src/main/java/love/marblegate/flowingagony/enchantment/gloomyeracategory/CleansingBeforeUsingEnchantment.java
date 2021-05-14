@@ -25,22 +25,22 @@ public class CleansingBeforeUsingEnchantment extends Enchantment {
     }
 
 
+    //Temporarily disable due to conflict with arclight
+    //Issue: https://github.com/IzzelAliz/Arclight/issues/267
+
     public boolean isTreasureEnchantment() {
         return true;
     }
 
-    public boolean canVillagerTrade() { return Config.CLEANSING_BEFORE_USING.get(); }
+    public boolean canVillagerTrade() { return false; }
 
-    public boolean canGenerateInLoot() { return Config.CLEANSING_BEFORE_USING.get(); }
+    public boolean canGenerateInLoot() { return false; }
 
     public boolean isAllowedOnBooks() {
-        return Config.CLEANSING_BEFORE_USING.get();
+        return false;
     }
 
     public boolean canApplyAtEnchantingTable(ItemStack stack) {
-        if(Config.CLEANSING_BEFORE_USING.get())
-            return super.canApplyAtEnchantingTable(stack);
-        else
-            return false;
+        return false;
     }
 }

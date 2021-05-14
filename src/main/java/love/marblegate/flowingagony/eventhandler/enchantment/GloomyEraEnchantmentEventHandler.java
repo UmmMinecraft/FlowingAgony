@@ -62,6 +62,9 @@ public class GloomyEraEnchantmentEventHandler {
     }
 
 
+    //Temporarily disable due to conflict with arclight
+    //Issue: https://github.com/IzzelAliz/Arclight/issues/267
+    /*
     @SubscribeEvent
     public static void doCleansingBeforeUsingEnchantmentEvent_updateResult(AnvilUpdateEvent event) {
         if (!event.getPlayer().world.isRemote()) {
@@ -100,6 +103,8 @@ public class GloomyEraEnchantmentEventHandler {
             }
         }
     }
+
+    */
 
     @SubscribeEvent
     public static void doComeBackAtDuskEnchantmentEvent(TickEvent.PlayerTickEvent event) {
