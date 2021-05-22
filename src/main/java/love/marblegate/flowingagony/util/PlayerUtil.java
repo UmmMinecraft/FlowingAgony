@@ -98,13 +98,6 @@ public class PlayerUtil {
     }
 
     public static void crazilyComsumeFoodLevel(PlayerEntity player) {
-        if (player.getFoodStats().getSaturationLevel() > 0) {
-            player.getFoodStats().setFoodSaturationLevel(player.getFoodStats().getSaturationLevel() - 1 > 1 ? player.getFoodStats().getSaturationLevel() - 1 : 0);
-        } else {
-            if(player.getFoodStats().getFoodLevel() > 0){
-                player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()-1);
-            }
-        }
     }
 
     public static List<LivingEntity> getTargetList(PlayerEntity player, float radius, float height, Predicate<LivingEntity> predicate){
